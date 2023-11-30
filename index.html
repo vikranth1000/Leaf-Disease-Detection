@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plant Leaf Disease Classification</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="static/css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
+    <!--
+	Product Admin CSS Template
+	https://templatemo.com/tm-524-product-admin
+	-->
+</head>
+
+<body id="Home">
+<div class="" id=Home>
+    <nav class="navbar navbar-expand-xl">
+        <div class="container h-100">
+            <a class="navbar-brand" href="/">
+                <h1 class="tm-site-title mb-0">Leaf Diseases Clasification</h1>
+            </a>
+            <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars tm-nav-icon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto h-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-tree"></i>Introduction
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about')}}">
+                            <i class="fas fa-info"></i> About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upload">
+                            <i class="fas fa-upload"></i>Upload
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-white mt-1 mt-1">Leaf Diseases</h4>
+            </div>
+        </div>
+
+        <div class="stlye">
+            <h5 class="tm-white mb-6 text-white">INTRODUCTION</h5>
+            <div class="about-image">
+                <p class="text-white mt-5 mb-8">The automated identification of plant diseases based on plant leaves is a major landmark in the field of agriculture. Moreover, the early and timely identification of plant diseases positively impacts crop yield and quality. Due to the cultivation of a large number of crop products, even an agriculturist and pathologist may often fail to identify the diseases in plants by visualizing disease-affected leaves. </p>
+                <img src="static/img/imf.jpg", style="margin-left:200px;width:586px;higth:200px;">
+
+                <p class="text-white mt-5 mb-8">Disease-infected plants usually show obvious marks or lesions on leaves, stems, flowers, or fruits. Generally, each disease or pest condition presents a unique visible pattern that can be used to uniquely diagnose abnormalities. Usually, the leaves of plants are the primary source for identifying plant diseases, and most of the symptoms of diseases may begin to appear on the leaves. In most cases, agricultural and forestry experts are used to identify on-site or farmers identify fruit tree diseases and pests based on experience. This method is not only subjective, but also time-consuming, laborious, and inefficient. Farmers with less experience may misjudgement and use drugs blindly during the identification process. Quality and output will also bring environmental pollution, which will cause unnecessary economic losses. To counter these challenges, research into the use of image processing techniques for plant disease recognition has become a hot research topic.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<!-- Background video -->
+
+
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script src="static/js/moment.min.js"></script>
+<!-- https://momentjs.com/ -->
+<script src="static/js/Chart.min.js"></script>
+<!-- http://www.chartjs.org/docs/latest/ -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- https://getbootstrap.com/ -->
+<script src="static/js/tooplate-scripts.js"></script>
+<script>
+        Chart.defaults.global.defaultFontColor = 'white';
+        let ctxLine,
+            ctxBar,
+            ctxPie,
+            optionsLine,
+            optionsBar,
+            optionsPie,
+            configLine,
+            configBar,
+            configPie,
+            lineChart;
+        barChart, pieChart;
+        // DOM is ready
+        $(function () {
+            drawLineChart(); // Line Chart
+            drawBarChart(); // Bar Chart
+            drawPieChart(); // Pie Chart
+
+            $(window).resize(function () {
+                updateLineChart();
+                updateBarChart();                
+            });
+        })
+    </script>
+</body>
+
+</html>
